@@ -1,0 +1,81 @@
+.form {
+  padding: 0.5rem;
+
+  width: 100vw;
+  max-width: 500px;
+
+  .reply,
+  .reply_error {
+    padding: 0.8rem 0.8rem;
+    margin-bottom: 0.8rem;
+
+    border: 1px solid #a2b6cf42;
+    border-radius: 0.456rem;
+
+    width: 100%;
+
+    background-color: #bdffdc;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #141c23;
+  }
+
+  .reply_error {
+    background-color: #ffbdbd;
+  }
+
+  .textarea {
+    padding: 0.8rem 0.8rem;
+
+    outline: none;
+    border: 1px solid #ffffff34;
+    border-radius: 0.456rem;
+
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    height: 200px;
+
+    background-color: #182435;
+
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Proxima Nova", sans-serif;
+    color: #fff;
+
+    transition: 0.4s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ffffff58;
+    }
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    margin-top: 0.8rem;
+
+    outline: none;
+    border: none;
+    border-radius: 0.456rem;
+
+    background-color: #6200ff;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+
+    transition: 0.4s;
+
+    &:hover {
+      background-color: #8a43fd;
+    }
+  }
+}
