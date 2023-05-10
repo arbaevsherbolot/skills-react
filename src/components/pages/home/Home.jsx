@@ -11,7 +11,7 @@ const Home = () => {
     setMessage(e.target.value);
   };
 
-  const server_url = "http://localhost:2006/messages";
+  const server_url = "authorization.up.railway.app/messages";
 
   const sendMessage = async (e) => {
     e.preventDefault();
