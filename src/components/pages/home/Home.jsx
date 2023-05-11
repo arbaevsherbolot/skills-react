@@ -58,7 +58,7 @@ const Home = () => {
           Add
         </button>
 
-        <Link className={styles.link} to="/messages">
+        <Link className={styles.link} to="/skills">
           See all skills
         </Link>
       </form>
