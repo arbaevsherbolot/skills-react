@@ -6,25 +6,31 @@ import styles from "./Messages.module.scss";
 const Messages = () => {
   const [data, setData] = useState([{}]);
 
-  const [skillID, setSkillID] = useState(0);
-
-  const server_url = "https://authorization.up.railway.app/skills";
+  const server_url = "https://crud-server-api.up.railway.app/skills";
 
   useEffect(() => {
-    async function getSkills() {
-      const result = await axios.get(server_url);
+    const getSkills = async () => {
+      try {
+        const result = await axios.get(server_url);
 
-      const data = result.data.message;
+        const data = result.data.message;
 
-      setData(data);
-    }
+        setData(data);
+      } catch (err) {
+        console.log(err.message);
+      }
+    };
 
     getSkills();
   }, []);
 
-  const deleteSkill = () => {
-
-    console.log(skillID);
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${server_url}/${id}`);
+      window.location.reload();
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
@@ -34,8 +40,12 @@ const Messages = () => {
           <div className={styles.skills_container}>
             {data.map((skill, i) => (
               <p className={styles.skill} key={i}>
-                {skill.id}. {skill.message}
-                <span onClick={deleteSkill} className={styles.delete}></span>
+                {skill.skill}
+                <button
+                  onClick={() => handleDelete(skill.id)}
+                  className={styles.delete_btn}>
+                  Delete
+                </button>
               </p>
             ))}
 
