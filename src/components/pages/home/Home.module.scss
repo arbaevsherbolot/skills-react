@@ -35,12 +35,12 @@
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    min-height: 200px;
-    height: 200px;
+    min-height: 50px;
+    max-height: 100px;
 
     background-color: var(--textarea-bg-color);
 
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     font-family: "Proxima Nova", sans-serif;
     color: var(--textarea-text-color);
