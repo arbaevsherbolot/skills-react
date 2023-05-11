@@ -32,7 +32,7 @@ const Messages = () => {
             ))}
 
             <Link className={styles.link} to="/">
-              Add new message
+              Add new skill
             </Link>
           </div>
         ) : null}

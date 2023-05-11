@@ -50,16 +50,16 @@ const Home = () => {
           className={styles.textarea}
           type="text"
           value={message}
-          placeholder="Type a question..."
+          placeholder="Type a new skill..."
           onChange={messageHandle}
           required></textarea>
 
         <button className={styles.btn} type="submit">
-          Send
+          Add
         </button>
 
         <Link className={styles.link} to="/messages">
-          See all messages
+          See all skills
         </Link>
       </form>
     </div>
