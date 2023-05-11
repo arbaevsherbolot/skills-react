@@ -21,11 +21,15 @@ body {
 }
 
 :root {
-  --nav-bg: rgba(255, 255, 255, 0.939);
-  --nav-text-bg-active: #e2e2e22c;
-  --nav-text-color: #12171ba8;
-  --nav-text-accent-color: #4209ed;
-  --nav-text-active-color: #0d1318;
-  --nav-border-color: #5656563f;
-  --nav-outline-color: #d9d9d945;
+  --textarea-border-color: #ffffff34;
+  --textarea-bg-color: #182435;
+  --textarea-text-color: #fff;
+  --placeholder-text-color: #ffffff58;
+  --message-border-color: #ffffff34;
+  --message-bg-color: #182435;
+  --message-text-color: #fff;
+  --btn-bg-color: #6200ff;
+  --btn-bg-hover-color: #8a43fd;
+  --link-text-color: #141c23;
+  --link-bg-color: #aaffcd;
 }

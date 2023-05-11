@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import styles from "./Home.module.scss";
 
@@ -56,6 +57,10 @@ const Home = () => {
         <button className={styles.btn} type="submit">
           Send
         </button>
+
+        <Link className={styles.link} to="/messages">
+          See all messages
+        </Link>
       </form>
     </div>
   );
