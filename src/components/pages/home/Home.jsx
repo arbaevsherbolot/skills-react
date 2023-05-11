@@ -19,7 +19,7 @@ const Home = () => {
 
     try {
       const result = await axios.post(server_url, {
-        message,
+        skill,
       });
 
       const data = result.data;
