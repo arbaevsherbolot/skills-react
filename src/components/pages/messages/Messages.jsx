@@ -6,6 +6,8 @@ import styles from "./Messages.module.scss";
 const Messages = () => {
   const [data, setData] = useState([{}]);
 
+  const [skillID, setSkillID] = useState(0);
+
   const server_url = "https://authorization.up.railway.app/skills";
 
   useEffect(() => {
@@ -20,6 +22,11 @@ const Messages = () => {
     getSkills();
   }, []);
 
+  const deleteSkill = () => {
+
+    console.log(skillID);
+  };
+
   return (
     <>
       <div className="page_wrapper">
@@ -28,6 +35,7 @@ const Messages = () => {
             {data.map((skill, i) => (
               <p className={styles.skill} key={i}>
                 {skill.id}. {skill.message}
+                <span onClick={deleteSkill} className={styles.delete}></span>
               </p>
             ))}
 

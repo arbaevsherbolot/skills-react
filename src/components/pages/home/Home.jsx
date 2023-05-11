@@ -12,7 +12,7 @@ const Home = () => {
     setSkill(e.target.value);
   };
 
-  const server_url = "http://localhost:2006/skills";
+  const server_url = "https://authorization.up.railway.app/skills";
 
   const sendSkillToServer = async (e) => {
     e.preventDefault();
