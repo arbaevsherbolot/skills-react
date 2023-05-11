@@ -45,9 +45,21 @@
   }
 }
 
-@media (min-width: 895px) {
+@media (min-width: 1225px) {
+  .skills_container {
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+  }
+}
+
+@media (min-width: 895px) and (max-width: 1225px) {
   .skills_container {
     grid-template-columns: 2fr 2fr 2fr 2fr;
+  }
+}
+
+@media (min-width: 675px) and (max-width: 895px) {
+  .skills_container {
+    grid-template-columns: 2fr 2fr 2fr;
   }
 }
 
