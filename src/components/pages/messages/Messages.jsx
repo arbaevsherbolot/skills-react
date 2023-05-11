@@ -6,10 +6,10 @@ import styles from "./Messages.module.scss";
 const Messages = () => {
   const [data, setData] = useState([{}]);
 
-  const server_url = "https://authorization.up.railway.app/messages";
+  const server_url = "https://authorization.up.railway.app/skills";
 
   useEffect(() => {
-    async function getMessages() {
+    async function getSkills() {
       const result = await axios.get(server_url);
 
       const data = result.data.message;
@@ -17,17 +17,17 @@ const Messages = () => {
       setData(data);
     }
 
-    getMessages();
+    getSkills();
   }, []);
 
   return (
     <>
       <div className="page_wrapper">
         {data ? (
-          <div className={styles.messages_container}>
-            {data.map((message, i) => (
-              <p className={styles.message} key={i}>
-                {message.message}
+          <div className={styles.skills_container}>
+            {data.map((skill, i) => (
+              <p className={styles.skill} key={i}>
+                {skill.id}. {skill.message}
               </p>
             ))}
 

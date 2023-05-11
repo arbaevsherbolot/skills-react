@@ -4,17 +4,17 @@ import axios from "axios";
 import styles from "./Home.module.scss";
 
 const Home = () => {
-  const [message, setMessage] = useState("");
+  const [skill, setSkill] = useState("");
   const [reply, setReply] = useState("");
   const [replyError, setReplyError] = useState("");
 
-  const messageHandle = (e) => {
-    setMessage(e.target.value);
+  const skillHandle = (e) => {
+    setSkill(e.target.value);
   };
 
-  const server_url = "https://authorization.up.railway.app/messages";
+  const server_url = "https://authorization.up.railway.app/skills";
 
-  const sendMessage = async (e) => {
+  const sendSkillToServer = async (e) => {
     e.preventDefault();
 
     try {
@@ -30,7 +30,7 @@ const Home = () => {
         setReply("");
       }, 8000);
 
-      setMessage("");
+      setSkill("");
     } catch {
       setReplyError("Server is temporarily unavailable!");
 
@@ -42,16 +42,16 @@ const Home = () => {
 
   return (
     <div className="page_wrapper">
-      <form className={styles.form} onSubmit={sendMessage}>
+      <form className={styles.form} onSubmit={sendSkillToServer}>
         {reply ? <p className={styles.reply}>{reply}</p> : null}
         {replyError ? <p className={styles.reply_error}>{replyError}</p> : null}
 
         <textarea
           className={styles.textarea}
           type="text"
-          value={message}
+          value={skill}
           placeholder="Type a new skill..."
-          onChange={messageHandle}
+          onChange={skillHandle}
           required></textarea>
 
         <button className={styles.btn} type="submit">
